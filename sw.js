@@ -1,0 +1,1 @@
+const C="jarvis-ultron-v3";self.addEventListener("install",e=>e.waitUntil(caches.open(C).then(c=>c.addAll(["./","./index.html","./manifest.json","./ultron-hud.png","./dashboard-concept.png"]).catch(()=>{}))));self.addEventListener("fetch",e=>e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request))));
